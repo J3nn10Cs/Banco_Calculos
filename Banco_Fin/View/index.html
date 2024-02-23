@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../Css/Style.css">
+    <title>Banco</title>
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a href="./index.html" class="logo">
+                    <h1 class="logo__nombre">Banco<span class="logo__bold">Cálculo</span></h1>  
+                </a>
+                <nav class="navegacion">
+                    <a href="../View/index.html" class="navegacion__banco">Inicio</a>
+                    <a href="../PHP/contact.php" class="navegacion__banco">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2>Haga sus cálculos y contactenos</h2>
+        </div>
+    </header>
+
+    <div class="contenedor grid">
+        <form class="contact-frm f1" id="Form" onsubmit="return CalcularMortgage(event)" method="get" target="_self">
+            <h1 class="campo_h1">Cálculo Hipotecario</h1>
+            <div class="campo">
+                <label for="fcuota" class="form-label">Cuota inicial:</label>
+                <input type="text" name="" id="fcuota" class="form-control">
+            </div>
+            <div class="campo">
+                <label for="fvtotal" class="form-label">Valor total:</label>
+                <input type="text" name="" id="fvtotal" class="form-control">
+            </div>
+            <div class="campo">
+                <label for="finteres" class="form-label">Tasa de interes:</label>
+                <input type="text" name="" id="finteres" class="form-control">
+            </div>
+            <div class="campo">
+                <label for="fplazo" class="form-label">Plazo en años:</label>
+                <input type="text" name="" id="fplazo" class="form-control">
+            </div>
+            <div class="campo">
+                <button class="boton boton--primario" type="submit">Calcular <i class="bi bi-cash-stack"></i></button>
+            </div>
+            
+        </form>
+        
+        <form class="contact-frm f2" id="Answer">
+            <h1 class="campo_h1">Resultado</h1>
+            <div class="campo">
+                <label class="form-label">Monto total prestamo:</label>
+                <output id="montoprestamo" class="form-control">0</output>
+            </div>
+            <div class="campo">
+                <label class="form-label">Valor cuota mensual:</label>
+                <output id="CuotaMensual" class="form-control">0</output>
+            </div>
+        </form>
+    </div>
+
+    <main class="contenedor">
+        <div class="informacion">
+            <h2 class="h2">Hola, ¿qué necesitas hacer hoy?</h2>
+            <div class="banc">
+                <div class="banc-imagen">
+                    <img src="../Img/abriri.png" alt="Abrir cuenta">
+                </div>
+                <div class="banc__info">
+                    <p class="banc__texto">Abrir una cuenta</p>
+                </div>
+            </div>
+            <div class="banc">
+                <div class="banc-imagen">
+                    <img src="../Img/tarjeta.webp" alt="">
+                </div>
+                <div class="banc__info">
+                    <p class="banc__texto">Obtener tarjeta de crédito</p>
+                </div>
+            </div>
+            <div class="banc">
+                <div class="banc-imagen">
+                    <img src="../Img/dineroo.jpg" alt="">
+                </div>
+                <div class="banc__info">
+                    <p class="banc__texto">Solicitar un préstamo</p>
+                </div>
+            </div>
+            <div class="banc">
+                <div class="banc-imagen">
+                    <img src="../Img/sueldo.png" alt="">
+                </div>
+                <div class="banc__info">
+                    <p class="banc__texto">Adelantar mi sueldo</p>
+                </div>
+            </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <h1 class="logo__nombre">Banco<span class="logo__bold">Cálculo</span></h1>
+            
+                <nav class="navegacion">
+                    <a href="../View/index.html" class="navegacion__banco">Inicio</a>
+                    <a href="../PHP/contact.php" class="navegacion__banco">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/banco.js"></script>
+</body>
+</html>
